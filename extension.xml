@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension xmlns="http://ns.adobe.com/air/extension/4.0">
+    <id>com.lj.ane.autostart</id>
+    <versionNumber>0.0.1</versionNumber>
+    <platforms>
+		<platform name="Android-ARM"> 
+            <applicationDeployment> 
+                <nativeLibrary>classes.jar</nativeLibrary> 
+                <initializer>com.lj.ane.autostart.AppAutostartANE</initializer> 
+            </applicationDeployment> 
+        </platform>
+		<platform name="default">
+			<applicationDeployment/>
+		</platform>
+    </platforms>
+</extension>
