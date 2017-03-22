@@ -9,27 +9,27 @@ In order to make your AS3/AIR project support autostart on Android reboot:
 
 2. Add the following strings into your XXX-app.xml's manifestAdditions section:
 
-    ```    
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />    
-		<application>
-		  <receiver android:enabled="true" android:name="com.lj.ane.autostart.receivers.BootBroadcastReceiver" android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
-				<intent-filter>
-					<action android:name="android.intent.action.BOOT_COMPLETED" />
-					<category android:name="android.intent.category.DEFAULT" />
-				</intent-filter>
-			</receiver>
-		</application>    
-    ```
+ 	```    
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />    
+	<application>
+		<receiver android:enabled="true" android:name="com.lj.ane.autostart.receivers.BootBroadcastReceiver" android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</receiver>
+	</application>    
+	```
     
    The app will autostart on the next reboot after the first launch.
     
 3. To allow/deny autostart use `allow` method:
 
-    ```
-    var ane : AppAutostart = AppAutostart.getInstance();
-    ane.allow(true);//allowed
-    ane.allow(false);//denied    
-    ```	
+	```
+	var ane : AppAutostart = AppAutostart.getInstance();
+	ane.allow(true);//allowed
+	ane.allow(false);//denied    
+	```	
 
 License
 =================
