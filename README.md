@@ -26,7 +26,7 @@ In order to make your AS3/AIR project support autostart on Android reboot:
 3. To allow/deny autostart use `allow` method:
 
 	```
-	var ane : AppAutostart = AppAutostart.getInstance();
+	var ane : AppAutostartANE = AppAutostartANE.getInstance();
 	ane.allow(true);//allowed
 	ane.allow(false);//denied    
 	```	
