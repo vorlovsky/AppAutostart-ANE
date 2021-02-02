@@ -1,7 +1,8 @@
 cls
 
-set ACOMPC=D:/Work/SDK/flex_sdk_4.6/bin/acompc
-set ADT="C:/Program Files/Adobe/Adobe Flash Builder 4.7 (64 Bit)/eclipse/plugins/com.adobe.flash.compiler_4.7.0.349722/AIRSDK_20/bin/adt"
+set SDK_DIR=D:/Work/SDK/air/33.1.1
+set ACOMPC=%SDK_DIR%/bin/acompc
+set ADT=%SDK_DIR%/bin/adt
 
 set SWFVERSION=20
 
@@ -23,7 +24,7 @@ echo "GETTING ANDROID JAR"
 unzip -o android/app/build/outputs/aar/app-debug.aar classes.jar -d platform/android/
 
 echo "GENERATING ANE"
-call %ADT% -package -target ane %NAME%.ane extension.xml -swc %NAME%.swc -platform Android-ARM -C platform/android library.swf classes.jar -platformoptions platform/android/platform.xml res/values/strings.xml -platform default -C platform/default library.swf
+call %ADT% -package -target ane %NAME%.ane extension.xml -swc %NAME%.swc -platform Android-ARM -C platform/android library.swf classes.jar -platformoptions platform/android/platform.xml res/values/strings.xml -platform Android-ARM64 -C platform/android library.swf classes.jar -platformoptions platform/android/platform.xml res/values/strings.xml -platform default -C platform/default library.swf
 
 del %NAME%.swc
 del platform\\android\\library.swf
