@@ -1,5 +1,5 @@
 # AppAutostart-ANE
-App autostart on boot Adobe Native Extension for Android
+App autostart-on-boot Adobe Native Extension for Android
 
 Getting Started
 =================
@@ -26,7 +26,7 @@ In order to make your AS3/AIR project support autostart on Android reboot:
 3. To allow/deny autostart use `allow` method:
 
 	```
-	var ane : AppAutostartANE = AppAutostartANE.getInstance();
+	var ane : AppAutostart = AppAutostart.getInstance();
 	ane.allow(true);//allowed
 	ane.allow(false);//denied    
 	```	
